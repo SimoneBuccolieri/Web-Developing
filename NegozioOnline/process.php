@@ -1,6 +1,5 @@
 <?php
 require_once 'class.php';
-session_start();
 if (!isset($_COOKIE['order'])) {
     $_COOKIE['order'] = new Order();
 }
