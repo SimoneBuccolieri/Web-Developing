@@ -1,16 +1,13 @@
 <?php
 require_once 'class.php';
-
-
-
 session_start();
-if (!isset($order)) {
-    $order] = new Order();
+if (!isset($_COOKIE['order'])) {
+    $_COOKIE['order'] = new Order();
 }
 
 $orderDetails = "";
 if (isset($_GET['action']) && $_GET['action'] === 'view') {
-    $orderDetails = $order->displayOrder();
+    $orderDetails = $_COOKIE["order"]->displayOrder();
 }
 
 ?>
