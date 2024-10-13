@@ -1,14 +1,19 @@
 <?php
 require_once 'class.php';
-if (!isset($_COOKIE['order'])) {
-    $_COOKIE['order'] = new Order();
+session_start();
+if (!isset($_SESSION['order'])) {
+    $_SESSION['order'] = new Order();
 }
 
 $orderDetails = "";
 if (isset($_GET['action']) && $_GET['action'] === 'view') {
-    $orderDetails = $_COOKIE["order"]->displayOrder();
+    $orderDetails = $_SESSION["order"]->displayOrder();
 }
-
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $product = new Product($_POST['name'], $_POST['price'], $_POST['quantity']);
+    $_SESSION['order']->addProduct($product);
+    header("Location:index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -74,8 +79,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'view') {
         <h2>Dettagli dell'Ordine</h2>
         <?php if ($orderDetails): ?>
             <?= $orderDetails ?>
-        <?php else: ?>
-            <p>Nessun prodotto nell'ordine.</p>
+        <?php else: 
+                Header("Location:index.php");?>
         <?php endif; ?>
     </div>
 

@@ -5,7 +5,7 @@
     </head>
     <body>
         <div>
-            <div>
+            <div class="centered">
                 <p>Login/Register Page</p>
                 <?php
                     if($_GET["info"]==="registrato"){
@@ -20,7 +20,7 @@
                     }    
                 ?>
             </div>
-            <div>
+            <div class="centered">
                 <form action="checklogin.php" method="POST">
                     Username: <input type="text" name="username" id="username">
                     Password: <input type="password" name="password" id="password">
