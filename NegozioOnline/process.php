@@ -1,13 +1,16 @@
 <?php
 require_once 'class.php';
+
+
+
 session_start();
-if (!isset($_SESSION['order'])) {
-    $_SESSION['order'] = new Order();
+if (!isset($order)) {
+    $order] = new Order();
 }
 
 $orderDetails = "";
 if (isset($_GET['action']) && $_GET['action'] === 'view') {
-    $orderDetails = $_SESSION["order"]->displayOrder();
+    $orderDetails = $order->displayOrder();
 }
 
 ?>
