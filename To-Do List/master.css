@@ -1,0 +1,34 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+}
+
+body{
+    background-color: rgb(220, 220, 220);
+}
+.title{
+    text-align: center;
+    color: crimson;
+    border:2px groove black;
+    border-radius: 30px;
+    font-family:sans-serif ;
+}
+.elenco{
+    color:blue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-items:left;
+
+    display: grid;
+    
+}.insert{
+    color: red;
+    
+}
+.principale{
+    display:flex;
+    justify-content: space-between;
+}
