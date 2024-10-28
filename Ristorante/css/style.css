@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 4px 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100vh;
+}
+.column{
+    flex-direction: column;
+}
+.center{
+    display: flex;
+    justify-content: center; /* centra orizzontalmente */
+    align-items: center;     /* centra verticalmente */
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.bgphoto{
+    color: white;
+    background-image: url('bg.jpg');
+    background-size: cover; /* Rende l'immagine di sfondo coprente */
+    background-position: center;
+}
+.textshadow{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.container-menu{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0;
+    margin: 5% 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+/* Moduli riutilizzabili per pagine future */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #ff9c4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #d27d37;
+}
+table {
+    width: 100%;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+nav {
+    background-color: #ff9c4a;
+    color: white;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Assicura che la navbar sia sopra altri contenuti */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Posiziona gli elementi in linea */
+    margin-right: 20px; /* Spazio tra i link */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sottolinea al passaggio del mouse */
+}
+footer {
+    background-color: #ff9c4a; /* Colore di sfondo */
+    color: white; /* Colore del testo */
+    text-align: center; /* Allinea il testo al centro */
+    padding: 20px 0; /* Padding verticale */
+    position: relative; /* Posizionamento relativo */
+    bottom: 0; /* Posiziona in fondo alla pagina */
+    width: 100%; /* Larghezza del footer */
+}
